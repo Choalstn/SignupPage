@@ -154,7 +154,7 @@ button:active {
 }
 
 .greeting {
-  transition: 0.3s ease;
+  transition: 1s ease;
   width: 25vw;
 }
 
@@ -179,6 +179,5 @@ button:active {
 
 .background {
   background-image: url("./img/img1.jpeg");
-  transition: 1s ease;
   background-size: cover;
 }

@@ -16,7 +16,7 @@ const main1 = document.querySelector('.main1');
 const greetingUser = document.querySelector('.main1-greeting');
 const createAccount = document.querySelector('.createAccount');
 const inputs = document.querySelector('#inputs');
-const img = document.querySelector('.greeting-img');
+
 
 console.log(inputs.children);
 
@@ -49,12 +49,12 @@ pwd2.onkeyup = function() {
 
 signup.onclick = function() {
   main2.classList.add('greeting');
-  main2.classList.add('background')
   main2.classList.add('changeBoxShadow')
   greetingUser.textContent = `Hello "${elInputUsername.value}"`
   createAccount.remove();
   inputs.remove(); 
-  img.classList.remove('hide');
+  setTimeout(() => main2.classList.add('background'), 950);
+
 
 }
 
