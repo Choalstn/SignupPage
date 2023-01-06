@@ -11,7 +11,15 @@ const pwd2 = document.querySelector('#password-retype')
 const mismatch = document.querySelector('.mismatch-message')
 
 const signup = document.querySelector('.signup');
-const main1 = document.querySelector('#main1');
+const main2 = document.querySelector('.main2');
+const main1 = document.querySelector('.main1');
+const greetingUser = document.querySelector('.main1-greeting');
+const createAccount = document.querySelector('.createAccount');
+const inputs = document.querySelector('#inputs');
+const img = document.querySelector('.greeting-img');
+
+console.log(inputs.children);
+
 
 
 // css를 직접적으로 바꿈 
@@ -19,11 +27,6 @@ const main1 = document.querySelector('#main1');
 
 // 현업에서 자주 쓰는 방법
 // elFailuredMessage.classList.remove('hide');
-
-signup.onclick = function() {
-  main1.classList.add('greeting')
-}
-
 
 elInputUsername.onkeyup = function() {
 
@@ -43,6 +46,18 @@ pwd2.onkeyup = function() {
     mismatch.classList.remove('hide');
   }
 }
+
+signup.onclick = function() {
+  main2.classList.add('greeting');
+  main2.classList.add('background')
+  main2.classList.add('changeBoxShadow')
+  greetingUser.textContent = `Hello "${elInputUsername.value}"`
+  createAccount.remove();
+  inputs.remove(); 
+  img.classList.remove('hide');
+
+}
+
 
 function isMoreThan4Length(value) {
   // TODO : 동영상 강의를 보고 이 함수를 완성하세요.

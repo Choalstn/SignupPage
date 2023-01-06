@@ -2,9 +2,9 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  color: var(--gray-900);
-  background-color: var(--white);
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  color: #d6e1ef;
+  background: linear-gradient(94.6deg, #32383e -60.81%, #17191c 185.78%);
   font-size: 16px;
 }
 
@@ -13,37 +13,53 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(to right, #d3cce3, #e9e4f0);
+  background: radial-gradient(
+        33.38% 15.83% at 34.4% 54.19%,
+        rgba(200, 84, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(167.96deg, #262b2f 3.36%, #16191d 76.99%);
 }
 
-
-#main1 {
+.main1 {
+  text-align: center;
   padding: 24px;
-  box-shadow:  -20px 20px 20px  #b3adc2;
-  /* border-radius: 50px; */
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  /* box-shadow:  20px 20px 20px  #b3adc2; */
+  box-shadow: 52px 20px 88px rgba(2, 3, 3, 0.5),
+    -8px -16px 56px rgba(232, 237, 243, 0.08);
+  border-radius: 50px;
+  background: none;
   height: 70vh;
-  width: 30vw;
-  position: relative;
-  right: 230px;
-  z-index: 2;
+  width: 50vw;
+  position: absolute;
+  right: 500px;
+
 }
 
-#main2 {
+.main2 {
   padding: 24px;
-  box-shadow:  20px 20px 20px  #b3adc2;
+  box-shadow: 52px 20px 88px rgba(2, 3, 3, 0.5),
+    -8px -16px 56px rgba(232, 237, 243, 0.08),
+    inset -16px -6px 80px rgba(248, 249, 249, 0.03);
   border-radius: 50px;
   height: 70vh;
   width: 70vw;
   position: absolute;
   right: 15vw;
+  z-index: 2;
 }
 
 h1 {
   text-align: center;
   font-size: 45px;
-  margin : 50px 0 50px
+  margin: 30px 0 50px;
+  background: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  background: none;
 }
 
 .hide {
@@ -60,60 +76,109 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   flex-direction: column;
+  background: none;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
-  border-color: var(--gray-10);
+  border: none;
+  border-bottom: 1px solid #a2a9b3;
+  background: rgba(0, 0, 0, 0);
   justify-content: center;
   margin: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   height: 55px;
   padding: 8px 12px;
 }
 
 input {
   margin-top: 10px;
-  border: none;
+  border : none;
   width: 25rem;
+  background: rgba(0, 0, 0, 0);
 }
 
 input:focus {
   outline: none;
 }
 
-.success-message, .failure-message, .mismatch-message {
+input::after {
+  background: rgba(0, 0, 0, 0);
+}
+
+.success-message,
+.failure-message,
+.mismatch-message {
+  background: none;
   color: gray;
   font-size: 12px;
-  margin-top : -10px;
+  margin-top: -10px;
   margin-bottom: 20px;
   padding-left: 1rem;
 }
 
 button {
   border: none;
-  border-radius: 50px;
-  background-color: #d3cce3;
+  background: none;
   width: 10rem;
   height: 3rem;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-button:hover {
+button:active {
+  transform: scale(0.95);
+}
 
+.main1-btn {
+  border: none;
+  background: none;
+  width: 10rem;
+  height: 3rem;
+  margin-top: 7rem;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main1-btn:active {
+  transform: scale(0.95);
+}
+
+
+
+.changeBoxShadow {
+  box-shadow: none
 }
 
 .greeting {
   transition: 0.3s ease;
-  width: 35vw;
-  
+  width: 25vw;
 }
 
+.main1-greeting {
+  text-align: center;
+  padding-top: 8rem;
+}
 
+.introduce1 {
 
+  padding-top: 2rem;
+  background: none;
+  font-size: 20px;
+}
 
+.introduce2 {
 
+  padding-top: 1rem;
+  background: none; 
+  font-size: 20px;
+}
 
+.background {
+  background-image: url("./img/img1.jpeg");
+  transition: 1s ease;
+  background-size: cover;
+}
